@@ -1,4 +1,4 @@
 Django
 numpy
 psycopg2
-opencv-python
+opencv-python-headless
