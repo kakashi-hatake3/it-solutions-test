@@ -11,11 +11,12 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+DATABASE_URL = 'postgresql://postgres:kQeprGoITCHhDgDHUUqLVAjYqixAbGdP@roundhouse.proxy.rlwy.net:37738/railway'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -77,14 +78,7 @@ WSGI_APPLICATION = 'it_solution_django.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'itSolutionRequests',
-        'USER': 'postgres',
-        'PASSWORD': 'kQeprGoITCHhDgDHUUqLVAjYqixAbGdP',
-        'HOST': 'roundhouse.proxy.rlwy.net',
-        'PORT': 37738,
-    }
+    'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=1800)
 }
 
 
