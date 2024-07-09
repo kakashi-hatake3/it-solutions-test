@@ -81,9 +81,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'itSolutionRequests',
         'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'HOST': 'localhost',
-        'PORT': 5432,
+        'PASSWORD': 'kQeprGoITCHhDgDHUUqLVAjYqixAbGdP',
+        'HOST': 'roundhouse.proxy.rlwy.net',
+        'PORT': 37738,
     }
 }
 
